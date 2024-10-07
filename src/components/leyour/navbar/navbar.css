@@ -1,0 +1,21 @@
+.container-navbar {
+    background-color: antiquewhite;
+    padding: 1% 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 4%;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    margin: 50%;
+    list-style: none;
+}

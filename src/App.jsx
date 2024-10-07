@@ -1,8 +1,10 @@
-function App() {
+import { Navbar } from "./components/leyour/navbar/Navbar";
+
+export function App() {
   return (
     <div>
-      <h2>hola</h2>
-    </div>
+      <Navbar />
+    </div >
   );
 }
 export default App;
