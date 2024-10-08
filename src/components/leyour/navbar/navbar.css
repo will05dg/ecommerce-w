@@ -1,6 +1,6 @@
 .container-navbar {
     background-color: antiquewhite;
-    padding: 1% 5%;
+    padding: 0% 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,6 +8,7 @@
 
 .logo {
     width: 4%;
+    margin: 1%;
 }
 
 ul {
@@ -16,6 +17,6 @@ ul {
 }
 
 li {
-    margin: 50%;
+    margin: 0% 50%;
     list-style: none;
 }
