@@ -5,6 +5,7 @@ const CartWidget = () => {
     return (
         <div>
             <ShoppingCartIcon />
+            <span> 0</span>
         </div>
     )
 }
