@@ -1,0 +1,16 @@
+.cartas {
+    display: flex;
+    margin: 20px;
+    background: antiquewhite;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.texto {
+    margin: 10pt;
+}
+
+img {
+    width: 100%;
+    border-radius: 20px 20pt 0pt 20pt;
+}

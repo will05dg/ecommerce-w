@@ -1,0 +1,6 @@
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    background-color: rgb(237, 244, 252);
+}
