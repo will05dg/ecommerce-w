@@ -1,15 +1,15 @@
-import "./cart.css";
+import "./card.css";
 
-export const Cart = () => {
+export const Card = ({ titulo, categoria, precio, stock, imagenSrc }) => {
     return (
         <div className="cartas">
-            <img src="https://res.cloudinary.com/dsphjfhea/image/upload/v1729023313/pexels-pixabay-37539_yzetob.jpg" alt="" />
+            <img src={imagenSrc} alt="" />
             <div className="texto">
-                <h3>titulo</h3>
-                <p>descripcion</p>
-                <h4>categoria</h4>
-                <h3>precio</h3>
-                <h4>stock</h4>
+                <h3>{titulo}</h3>
+                <h3>precio: US ${precio}</h3>
+                <h4>categoria: {categoria}</h4>
+                <h4>stock: {stock}</h4>
+                <button>ver más</button>
             </div>
         </div>
     )

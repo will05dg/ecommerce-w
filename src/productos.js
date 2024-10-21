@@ -4,7 +4,8 @@ export const productosArte = [
     titulo: "Pinceles Profesionales",
     precio: 25,
     stock: 50,
-    imagen: "pinceles.jpg",
+    imagenSrc:
+      "https://res.cloudinary.com/dsphjfhea/image/upload/v1729023313/pexels-pixabay-37539_yzetob.jpg",
     descripcion:
       "Juego de pinceles de alta calidad para artistas profesionales y principiantes.",
     categoria: "Pintura",
@@ -14,7 +15,8 @@ export const productosArte = [
     titulo: "Acrílicos Premium",
     precio: 40,
     stock: 30,
-    imagen: "acrilicos.jpg",
+    imagenSrc:
+      "https://res.cloudinary.com/dsphjfhea/image/upload/v1729023313/pexels-pixabay-37539_yzetob.jpg",
     descripcion: "Set de acrílicos con colores vibrantes y duraderos.",
     categoria: "Pintura",
   },
@@ -23,7 +25,8 @@ export const productosArte = [
     titulo: "Bloc de Dibujo",
     precio: 15,
     stock: 100,
-    imagen: "bloc_dibujo.jpg",
+    imagenSrc:
+      "https://res.cloudinary.com/dsphjfhea/image/upload/v1729023313/pexels-pixabay-37539_yzetob.jpg",
     descripcion: "Bloc de papel de alta calidad para dibujos y bocetos.",
     categoria: "Dibujo",
   },
@@ -32,7 +35,8 @@ export const productosArte = [
     titulo: "Lápices de Grafito",
     precio: 20,
     stock: 80,
-    imagen: "lapices_grafito.jpg",
+    imagenSrc:
+      "https://res.cloudinary.com/dsphjfhea/image/upload/v1729023313/pexels-pixabay-37539_yzetob.jpg",
     descripcion:
       "Set de lápices de grafito para profesionales, con diferentes grados de dureza.",
     categoria: "Dibujo",
@@ -42,7 +46,8 @@ export const productosArte = [
     titulo: "Caballete de Madera",
     precio: 60,
     stock: 10,
-    imagen: "caballete.jpg",
+    imagenSrc:
+      "https://res.cloudinary.com/dsphjfhea/image/upload/v1729023313/pexels-pixabay-37539_yzetob.jpg",
     descripcion:
       "Caballete ajustable de madera de haya, perfecto para pintar o exponer obras.",
     categoria: "Accesorios",
@@ -52,7 +57,8 @@ export const productosArte = [
     titulo: "Paleta de Mezcla",
     precio: 10,
     stock: 25,
-    imagen: "paleta_mezcla.jpg",
+    imagenSrc:
+      "https://res.cloudinary.com/dsphjfhea/image/upload/v1729023313/pexels-pixabay-37539_yzetob.jpg",
     descripcion: "Paleta ergonómica para mezclar pinturas acrílicas y óleos.",
     categoria: "Accesorios",
   },
@@ -61,7 +67,8 @@ export const productosArte = [
     titulo: "Óleos Profesionales",
     precio: 45,
     stock: 35,
-    imagen: "oleos.jpg",
+    imagenSrc:
+      "https://res.cloudinary.com/dsphjfhea/image/upload/v1729023313/pexels-pixabay-37539_yzetob.jpg",
     descripcion:
       "Set de óleos de alta calidad, perfectos para pintura artística.",
     categoria: "Pintura",
@@ -71,7 +78,8 @@ export const productosArte = [
     titulo: "Pasteles Secos",
     precio: 30,
     stock: 20,
-    imagen: "pasteles_secos.jpg",
+    imagenSrc:
+      "https://res.cloudinary.com/dsphjfhea/image/upload/v1729023313/pexels-pixabay-37539_yzetob.jpg",
     descripcion:
       "Caja de pasteles secos suaves, ideales para crear efectos artísticos únicos.",
     categoria: "Dibujo",
@@ -81,7 +89,8 @@ export const productosArte = [
     titulo: "Marco de Madera",
     precio: 50,
     stock: 15,
-    imagen: "marco_madera.jpg",
+    imagenSrc:
+      "https://res.cloudinary.com/dsphjfhea/image/upload/v1729023313/pexels-pixabay-37539_yzetob.jpg",
     descripcion: "Marco de madera natural para enmarcar obras de arte.",
     categoria: "Accesorios",
   },
@@ -90,7 +99,8 @@ export const productosArte = [
     titulo: "Lápices de Colores",
     precio: 35,
     stock: 60,
-    imagen: "lapices_colores.jpg",
+    imagenSrc:
+      "https://res.cloudinary.com/dsphjfhea/image/upload/v1729023313/pexels-pixabay-37539_yzetob.jpg",
     descripcion:
       "Set de lápices de colores de alta pigmentación, perfectos para ilustraciones detalladas.",
     categoria: "Dibujo",
