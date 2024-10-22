@@ -1,7 +1,7 @@
-import { Card } from "../../common/Card/Card"
 import "./itemListContainer.css";
 import { productosArte } from "../../../productos";
 import { useEffect, useState } from "react";
+import { ItemList } from "../../common/ItemList/ItemList";
 
 let myProductosArtePromise = new Promise((res, rej) => {
     setTimeout(() => {
@@ -30,18 +30,7 @@ export const ItemListContainer = () => {
 
     return (
         <div className="grilla" >
-            {myProductosArte.map(({ id, titulo, categoria, precio, stock, imagenSrc }) => {
-                return (
-                    <Card
-                        key={id}
-                        imagenSrc={imagenSrc}
-                        titulo={titulo}
-                        categoria={categoria}
-                        precio={precio}
-                        stock={stock}
-                    />
-                )
-            })}
+            <ItemList myProductosArte={myProductosArte} />
         </div >
 
     )
