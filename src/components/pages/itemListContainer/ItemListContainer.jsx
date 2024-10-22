@@ -24,25 +24,22 @@ export const ItemListContainer = () => {
             }).catch((err) => {
                 console.log(err)
             }).finally(() => {
-                console.log("siempre se ejecuta")
+                console.log("finalizado")
             })
     }, []);
 
-    const myProductosArteMap = myProductosArte.map((prod) => prod.titulo)
-    console.log(myProductosArteMap)
-
-
     return (
         <div className="grilla" >
-            {myProductosArte.map((prod) => {
+            {myProductosArte.map(({ id, titulo, categoria, precio, stock, imagenSrc }) => {
                 return (
                     <Card
-                        key={prod.id}
-                        imagenSrc={prod.imagenSrc}
-                        titulo={prod.titulo}
-                        categoria={prod.categoria}
-                        precio={prod.precio}
-                        stock={prod.stock} />
+                        key={id}
+                        imagenSrc={imagenSrc}
+                        titulo={titulo}
+                        categoria={categoria}
+                        precio={precio}
+                        stock={stock}
+                    />
                 )
             })}
         </div >
