@@ -9,6 +9,7 @@ export const ItemList = ({ myProductosArte }) => {
             categoria={categoria}
             precio={precio}
             stock={stock}
+            id={id}
         />
     ));
 };
