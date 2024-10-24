@@ -1,8 +1,8 @@
 import { Navbar } from "./components/leyour/navbar/Navbar";
 import { ItemListContainer } from "./components/pages/itemListContainer/ItemListContainer";
-import { BrowserRouter, Routes, Router } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Carrito } from "./components/pages/Carrito/Carrito";
-import ItemDetail from "./components/pages/itemDetail/ItemDetail";
+import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
 
 
 export function App() {
@@ -10,14 +10,14 @@ export function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Router path="/" element={<ItemListContainer />} />
+        <Route path="/" element={<ItemListContainer />} />
 
-        <Router path="/detail" element={<ItemDetail />} />
+        <Route path="/detail" element={<ItemDetailContainer />} />
 
-        <Router path="/cart" element={<Carrito />} />
+        <Route path="/cart" element={<Carrito />} />
 
-        <Router path="*" element={<h2>420</h2>} />
-      </Routes >
+        <Route path="*" element={<h2>420</h2>} />
+      </Routes>
     </BrowserRouter>
   );
 }

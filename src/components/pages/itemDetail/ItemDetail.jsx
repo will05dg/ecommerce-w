@@ -1,11 +1,11 @@
 
 
-export const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item }) => {
     return (
         <div>
-            <h2>{item.titulo}</h2>
+            <h3>{item.titulo}</h3>
         </div>
     )
-}
+};
 
-export default ItemDetail
+export default ItemDetail;
