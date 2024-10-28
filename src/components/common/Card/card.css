@@ -8,10 +8,27 @@
 }
 
 .texto {
-    margin: 10pt;
+    margin: 10px;
 }
 
 img {
     width: 100%;
-    border-radius: 20px 20pt 0pt 20pt;
+    border-radius: 20px 20px 0px 20px;
+}
+
+button {
+    background: linear-gradient(to bottom, #4CB8C4 0%, #3CD3AD 51%, #4CB8C4 100%);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.342);
+    color: #ffffff;
+    padding: 15px 50px;
+    margin: 10pt 2px;
+    border-radius: 30px;
+    font-size: 10pt;
+    border: none;
+}
+
+button:hover {
+    -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.58);
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.58);
 }

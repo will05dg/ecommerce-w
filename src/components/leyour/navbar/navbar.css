@@ -16,7 +16,15 @@ ul {
     align-items: center;
 }
 
+a {
+    color: #4CB8C4;
+}
+
+a:hover {
+    color: #3CD3AD;
+}
+
 li {
-    margin: 0% 50%;
     list-style: none;
+    padding: 0pt 20pt;
 }

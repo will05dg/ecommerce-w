@@ -2,6 +2,7 @@ import "./itemListContainer.css";
 import { productosArte } from "../../../productos";
 import { useEffect, useState } from "react";
 import { ItemList } from "../../common/ItemList/ItemList";
+import { useParams } from "react-router-dom";
 
 let myProductosArtePromise = new Promise((res, rej) => {
     setTimeout(() => {
@@ -15,18 +16,27 @@ let myProductosArtePromise = new Promise((res, rej) => {
 
 export const ItemListContainer = () => {
 
+    const { categoria } = useParams();
+
+
     const [myProductosArte, setMyProductoArte] = useState([])
 
     useEffect(() => {
+
+        const fraccion = productosArte.filter(producto => producto.categoria === categoria);
+
+        const myProductosArtePromise = new Promise((resolve) => {
+            resolve(categoria ? fraccion : productosArte);
+        });
+
         myProductosArtePromise
             .then((data) => {
                 setMyProductoArte(data)
             }).catch((err) => {
                 console.log(err)
             }).finally(() => {
-                console.log("finalizado")
             })
-    }, []);
+    }, [categoria]);
 
     return (
         <div className="grilla" >

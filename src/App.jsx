@@ -12,7 +12,9 @@ export function App() {
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
 
-        <Route path="/detail" element={<ItemDetailContainer />} />
+        <Route path="/category/:categoria" element={<ItemListContainer />} />
+
+        <Route path="/detail/:id" element={<ItemDetailContainer />} />
 
         <Route path="/cart" element={<Carrito />} />
 

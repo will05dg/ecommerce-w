@@ -10,9 +10,19 @@ export const Navbar = () => {
                     <img src="https://res.cloudinary.com/dsphjfhea/image/upload/v1728271324/Mesa_de_trabajo_1_ekn2hk.svg" alt="logo de lapiz" className="logo" />
                 </Link>
                 <ul>
-                    <li>productos</li>
-                    <li>marcas</li>
-                    <li>tintas</li>
+                    <li>
+                        <Link to={"/"}>Home</Link>
+                    </li>
+                    <li>
+                        <Link to={"/category/Dibujo"}>Dibujo</Link>
+                    </li>
+                    <li>
+                        <Link to={"/category/Pintura"}>Pintura</Link>
+                    </li>
+                    <li>
+                        <Link to={"/category/Accesorios"}>Accesorios</Link>
+                    </li>
+
                 </ul>
                 < CartWidget />
             </div>

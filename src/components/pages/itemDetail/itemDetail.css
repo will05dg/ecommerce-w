@@ -1,0 +1,12 @@
+.detallesContenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20pt;
+    background-color: rgb(237, 244, 252)
+}
+
+.detalleImagen {
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
