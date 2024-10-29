@@ -14,6 +14,8 @@ let myProductosArtePromise = new Promise((res, rej) => {
     }, 2000)
 });
 
+console.log(myProductosArtePromise)
+
 export const ItemListContainer = () => {
 
     const { categoria } = useParams();
