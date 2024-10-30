@@ -1,4 +1,4 @@
-import { Card } from "../Card/Card";
+import { Card } from "../../common/Card/Card";
 
 export const ItemList = ({ myProductosArte }) => {
     return myProductosArte.map(({ id, titulo, categoria, precio, stock, imagenSrc }) => (
