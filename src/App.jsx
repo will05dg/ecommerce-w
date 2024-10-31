@@ -11,12 +11,11 @@ export function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
-
         <Route path="/category/:categoria" element={<ItemListContainer />} />
 
-        <Route path="/detail/:id" element={<ItemDetailContainer />} />
-
         <Route path="/cart" element={<Carrito />} />
+
+        <Route path="/detail/:id" element={<ItemDetailContainer />} />
 
         <Route path="*" element={<h2>420</h2>} />
       </Routes>

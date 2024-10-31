@@ -1,8 +1,10 @@
+import Counter from "../../common/counter/Counter";
 import "./itemDetail.css"
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, agregarAlCarrito }) => {
     return (
         <div className="detallesContenedor">
+
             <img src={item.imagenSrc} alt="" className="detalleImagen" />
             <div>
                 <div>
@@ -12,11 +14,9 @@ const ItemDetail = ({ item }) => {
                 <div>
                     <h3>precio: US ${item.precio}</h3>
                     <h4>categoria:{item.categoria}</h4>
-                    <h4>stock:{item.stock}</h4>
                 </div>
-                <button>+</button>
-                <button>-</button>
-                <button>Agregar</button>
+
+                <Counter stock={item.stock} agregarAlCarrito={agregarAlCarrito} />
             </div>
         </div>
     )

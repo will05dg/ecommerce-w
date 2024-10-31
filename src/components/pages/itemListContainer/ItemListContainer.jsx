@@ -1,7 +1,7 @@
 import "./itemListContainer.css";
 import { productosArte } from "../../../productos";
 import { useEffect, useState } from "react";
-import { ItemList } from "../../common/ItemList/ItemList";
+import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 
 let myProductosArtePromise = new Promise((res, rej) => {
