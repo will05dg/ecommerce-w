@@ -14,8 +14,6 @@ export const Card = ({ imagenSrc, titulo, categoria, precio, stock, id }) => {
                     <button>ver más</button>
                 </Link>
 
-                <button>Agregar</button>
-
             </div>
         </div>
     );

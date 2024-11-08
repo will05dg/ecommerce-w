@@ -22,7 +22,6 @@ export const Navbar = () => {
                     <li>
                         <Link to={"/category/Accesorios"}>Accesorios</Link>
                     </li>
-
                 </ul>
                 < CartWidget />
             </div>
