@@ -1,19 +1,31 @@
 import { Link } from "react-router-dom"
 import "./carrito.css"
+import { useContext } from "react"
+import { CartContext } from "../../../context/CartContext"
 
-export const Carrito = (item) => {
+export const Carrito = () => {
+    const { cart } = useContext(CartContext)
+
     return (
-        <div >
-            <div className="cartCarrito">
-                <img src={item.imagenSrc} alt="" className="detalleImagen" />
-                <div>
-                    <h2>{item.titulo}</h2>
-                    <p>{item.descripcion}</p>
-                </div>
+        < div className="contenedorCarrito">
+            {cart.map((product) => {
+                return <div key={product.id} className="cartCarrito">
+                    <img src={product.imagenSrc} alt="" className="ImagenCarrito" />
+                    <div className="textoCarrito">
+                        <h2>{product.titulo}</h2>
+                        <h3>cantidad:{product.quantity}</h3>
+
+                    </div>
+                </div>;
+            })}
+            <div className="botonCarrito">
+                <button>limpiar carrito</button>
+                <Link to={"/checkout"}>
+                    <button>Comprar</button>
+                </Link>
             </div>
-            <Link to={"/checkout"}>
-                <button>Comprar</button>
-            </Link>
         </div>
     )
 }
+
+export default CartContext

@@ -13,7 +13,6 @@ export const Card = ({ imagenSrc, titulo, categoria, precio, stock, id }) => {
                 <Link to={`/detail/${id}`}>
                     <button>ver más</button>
                 </Link>
-
             </div>
         </div>
     );

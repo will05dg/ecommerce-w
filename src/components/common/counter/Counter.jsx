@@ -14,8 +14,8 @@ const Counter = ({ stock, onAdd }) => {
     return (
         <div>
             <div>
-                <button onClick={sumar}>+</button>
                 <button onClick={restar}>-</button>
+                <button onClick={sumar}>+</button>
             </div>
             <h2>Productos:{contador}</h2>
             <button onClick={() => onAdd(contador)}>Agregar</button>

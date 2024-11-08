@@ -1,0 +1,30 @@
+.contenedorCarrito {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    background-color: rgb(237, 244, 252)
+}
+
+.cartCarrito {
+    grid-column: 1 / 3;
+    display: flex;
+    margin: 10px;
+    background: antiquewhite;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.botonCarrito {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.ImagenCarrito {
+    width: 20%;
+    padding: 2pt;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.textoCarrito {
+    margin: 10px;
+}
