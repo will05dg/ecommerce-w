@@ -4,7 +4,7 @@ import { useContext } from "react"
 import { CartContext } from "../../../context/CartContext"
 
 export const Carrito = () => {
-    const { cart } = useContext(CartContext)
+    const { cart, resetCart, removeById } = useContext(CartContext)
 
     return (
         < div className="contenedorCarrito">
@@ -13,13 +13,13 @@ export const Carrito = () => {
                     <img src={product.imagenSrc} alt="" className="ImagenCarrito" />
                     <div className="textoCarrito">
                         <h2>{product.titulo}</h2>
-                        <h3>cantidad:{product.quantity}</h3>
-
+                        <h3>cantidad:{product.quantity}</h3 >
+                        <button onClick={() => removeById(product.id)}>eliminar</button>
                     </div>
                 </div>;
             })}
             <div className="botonCarrito">
-                <button>limpiar carrito</button>
+                <button onClick={resetCart}>limpiar</button>
                 <Link to={"/checkout"}>
                     <button>Comprar</button>
                 </Link>

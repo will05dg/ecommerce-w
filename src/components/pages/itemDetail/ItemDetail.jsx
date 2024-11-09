@@ -1,7 +1,7 @@
 import Counter from "../../common/counter/Counter";
 import "./itemDetail.css"
 
-const ItemDetail = ({ item, onAdd }) => {
+const ItemDetail = ({ item, onAdd, totalInCart }) => {
     return (
         <div className="detallesContenedor">
             <img src={item.imagenSrc} alt="" className="detalleImagen" />
@@ -15,7 +15,11 @@ const ItemDetail = ({ item, onAdd }) => {
                     <h4>categoria:{item.categoria}</h4>
                 </div>
 
-                <Counter stock={item.stock} onAdd={onAdd} />
+                <Counter
+                    stock={item.stock}
+                    onAdd={onAdd}
+                    totalInCart={totalInCart}
+                />
             </div>
         </div>
     )

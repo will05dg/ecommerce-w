@@ -6,7 +6,9 @@ import { CartContext } from "../../../context/CartContext";
 
 const ItemDetailContainer = () => {
     const { id } = useParams();
-    const { addToCart } = useContext(CartContext)
+    const { addToCart, getTotalQuantity } = useContext(CartContext)
+
+    let totalInCart = getTotalQuantity(id);
 
     const [item, setItem] = useState({});
 
@@ -20,7 +22,7 @@ const ItemDetailContainer = () => {
         addToCart(objeto)
     };
 
-    return <ItemDetail item={item} onAdd={onAdd} />;
+    return <ItemDetail item={item} onAdd={onAdd} totalInCart={totalInCart} />;
 };
 
 export default ItemDetailContainer;
