@@ -4,22 +4,9 @@ import { useEffect, useState } from "react";
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 
-let myProductosArtePromise = new Promise((res, rej) => {
-    setTimeout(() => {
-        if (productosArte.length === 0) {
-            rej("productos vacios");
-        } else {
-            res(productosArte)
-        }
-    }, 2000)
-});
-
-console.log(myProductosArtePromise)
-
 export const ItemListContainer = () => {
 
     const { categoria } = useParams();
-
 
     const [myProductosArte, setMyProductoArte] = useState([])
 
@@ -33,12 +20,18 @@ export const ItemListContainer = () => {
 
         myProductosArtePromise
             .then((data) => {
-                setMyProductoArte(data)
+                setTimeout(() => {
+                    setMyProductoArte(data)
+                }, 2000);
             }).catch((err) => {
                 console.log(err)
             }).finally(() => {
             })
     }, [categoria]);
+
+    if (myProductosArte.length == 0) {
+        return <h2>cargando ...</h2>
+    }
 
     return (
         <div className="grilla" >

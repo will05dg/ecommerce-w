@@ -31,13 +31,16 @@ export const CartContextProvider = ({ children }) => {
     };
 
     const getTotalQuantity = (id) => {
-        const product = cart.find((elemento) => elemento.id === id);
+        const product = cart.find((elemento) => elemento.id == id);
         return product ? product.quantity : 0;
     }
 
-    const totalAPagar = () => { };
+    const getTotalAmount = () => {
+        let total = cart.reduce((acumulador, elemento) => { return acumulador + (elemento.precio * elemento.quantity) }, 0)
+        return total;
+    };
 
-    let dataValue = { cart, addToCart, removeById, resetCart, getTotalQuantity, totalAPagar };
+    let dataValue = { cart, addToCart, removeById, resetCart, getTotalQuantity, getTotalAmount };
 
     return <CartContext.Provider value={dataValue}>
         {children}

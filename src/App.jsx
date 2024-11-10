@@ -5,6 +5,7 @@ import { Carrito } from "./components/pages/Carrito/Carrito";
 import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
 import Checkout from "./components/pages/checkout/Checkout";
 import { CartContextProvider } from "./context/CartContext";
+import Footer from "./components/leyour/footer/Footer";
 
 
 export function App() {
@@ -24,6 +25,7 @@ export function App() {
 
           <Route path="*" element={<h2>420</h2>} />
         </Routes>
+        <Footer />
       </CartContextProvider>
     </BrowserRouter>
   );
