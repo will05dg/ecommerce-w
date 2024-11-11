@@ -6,11 +6,13 @@ import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContain
 import Checkout from "./components/pages/checkout/Checkout";
 import { CartContextProvider } from "./context/CartContext";
 import Footer from "./components/leyour/footer/Footer";
+import { Toaster } from "sonner";
 
 
 export function App() {
   return (
     <BrowserRouter>
+      <Toaster duration={2000} richColors />
       <CartContextProvider>
         <Navbar />
         <Routes>

@@ -10,3 +10,19 @@
     border-radius: 20px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
+h2 {
+    font-size: 25px;
+    font-weight: 900;
+
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 500;
+}
