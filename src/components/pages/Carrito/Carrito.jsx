@@ -25,14 +25,22 @@ export const Carrito = () => {
                 </div>;
             })}
 
-            {cart.length > 0 && (
+
+
+            {cart.length > 0 ? (
                 <div className="botonCarrito">
                     <button onClick={resetCart}>limpiar</button>
                     <h2>El total a pager es US ${total}</h2>
                     <Link to={"/checkout"}>
                         <button>Comprar</button>
                     </Link>
-                </div>)}
+                </div>) :
+                (
+                    <div className="centro">
+                        <img src="https://res.cloudinary.com/dsphjfhea/image/upload/v1728271324/Mesa_de_trabajo_1_ekn2hk.svg" alt="logo de lapiz" />
+                        <h2>Agregar productos al carrito</h2>
+                    </div>
+                )}
         </div>
     )
 }
