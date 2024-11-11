@@ -8,3 +8,26 @@
 body {
     background-color: rgb(237, 244, 252);
 }
+
+.cartasloadin {
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+
+.botonlondin {
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.342);
+    color: #ffffff;
+    padding: 15px 50px;
+    margin: 10pt 2px;
+    border-radius: 30px;
+    font-size: 10pt;
+    border: none;
+}
+
+.imagenloandin {
+    width: 100%;
+    border-radius: 20px 20px 0px 20px;
+}
