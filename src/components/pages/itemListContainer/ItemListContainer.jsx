@@ -1,9 +1,10 @@
 import "./itemListContainer.css";
-import { productosArte } from "../../../productos";
 import { useEffect, useState } from "react";
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 import { Skeleton } from "@mui/material";
+import { db } from "../../../firebaseConfig";
+import { getDocs, collection, query, where } from "firebase/firestore"
 
 export const ItemListContainer = () => {
 
@@ -12,22 +13,21 @@ export const ItemListContainer = () => {
     const [myProductosArte, setMyProductoArte] = useState([])
 
     useEffect(() => {
+        const productsColection = collection(db, "productosArte");
 
-        const fraccion = productosArte.filter(producto => producto.categoria === categoria);
+        let docsRef = productsColection;
 
-        const myProductosArtePromise = new Promise((resolve) => {
-            resolve(categoria ? fraccion : productosArte);
-        });
+        if (categoria) {
+            docsRef = query(productsColection, where("categoria", "==", categoria));
+        }
 
-        myProductosArtePromise
-            .then((data) => {
-                setTimeout(() => {
-                    setMyProductoArte(data)
-                }, 2000);
-            }).catch((err) => {
-                console.log(err)
-            }).finally(() => {
-            })
+        getDocs(docsRef).then((res) => {
+            let arrayEntendible = res.docs.map((doc) => {
+                return { ...doc.data(), id: doc.id };
+            });
+
+            setMyProductoArte(arrayEntendible);
+        })
     }, [categoria]);
 
     if (myProductosArte.length == 0) {
@@ -41,8 +41,90 @@ export const ItemListContainer = () => {
                     <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
                     <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={150} className="botonlondin" />
                 </div>
+                <div className="cartasloadin">
+                    <Skeleton variant="rectangular" width={221} height={200} className="imagenloandin" />
+                    <Skeleton variant="text" sx={{ fontSize: '3rem' }} width={210} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={200} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={150} className="botonlondin" />
+                </div>
+                <div className="cartasloadin">
+                    <Skeleton variant="rectangular" width={221} height={200} className="imagenloandin" />
+                    <Skeleton variant="text" sx={{ fontSize: '3rem' }} width={210} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={200} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={150} className="botonlondin" />
+                </div>
+                <div className="cartasloadin">
+                    <Skeleton variant="rectangular" width={221} height={200} className="imagenloandin" />
+                    <Skeleton variant="text" sx={{ fontSize: '3rem' }} width={210} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={200} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={150} className="botonlondin" />
+                </div>
+                <div className="cartasloadin">
+                    <Skeleton variant="rectangular" width={221} height={200} className="imagenloandin" />
+                    <Skeleton variant="text" sx={{ fontSize: '3rem' }} width={210} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={200} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={150} className="botonlondin" />
+                </div>
+                <div className="cartasloadin">
+                    <Skeleton variant="rectangular" width={221} height={200} className="imagenloandin" />
+                    <Skeleton variant="text" sx={{ fontSize: '3rem' }} width={210} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={200} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={150} className="botonlondin" />
+                </div>
+                <div className="cartasloadin">
+                    <Skeleton variant="rectangular" width={221} height={200} className="imagenloandin" />
+                    <Skeleton variant="text" sx={{ fontSize: '3rem' }} width={210} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={200} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={150} className="botonlondin" />
+                </div>
+                <div className="cartasloadin">
+                    <Skeleton variant="rectangular" width={221} height={200} className="imagenloandin" />
+                    <Skeleton variant="text" sx={{ fontSize: '3rem' }} width={210} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={200} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={150} className="botonlondin" />
+                </div>
+                <div className="cartasloadin">
+                    <Skeleton variant="rectangular" width={221} height={200} className="imagenloandin" />
+                    <Skeleton variant="text" sx={{ fontSize: '3rem' }} width={210} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={200} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={150} className="botonlondin" />
+                </div>
+                <div className="cartasloadin">
+                    <Skeleton variant="rectangular" width={221} height={200} className="imagenloandin" />
+                    <Skeleton variant="text" sx={{ fontSize: '3rem' }} width={210} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={200} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={150} className="botonlondin" />
+                </div>
+                <div className="cartasloadin">
+                    <Skeleton variant="rectangular" width={221} height={200} className="imagenloandin" />
+                    <Skeleton variant="text" sx={{ fontSize: '3rem' }} width={210} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={200} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} width={160} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={150} className="botonlondin" />
+                </div>
             </div>)
     }
+
+    //const funcionAgregar = () => {const productsColection = collection(db, "productosArte"); productosArte.forEach((productosArte) => { addDoc(productsColection, productosArte) })}
 
     return (
         <div className="grilla" >
