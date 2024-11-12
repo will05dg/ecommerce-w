@@ -32,7 +32,7 @@ export const ItemListContainer = () => {
     //const funcionAgregar = () => {const productsColection = collection(db, "productosArte"); productosArte.forEach((productosArte) => { addDoc(productsColection, productosArte) })}
 
     return (
-        <div className="grilla" >
+        <div className="grilla">
             <ItemList myProductosArte={myProductosArte} />
         </div >
 
