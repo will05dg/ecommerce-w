@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
+    grid-auto-rows: minmax(auto, 45%);
     background-color: rgb(237, 244, 252)
 }
 
@@ -16,7 +17,7 @@
 
 .botonCarrito {
     grid-column: 3;
-    grid-row: 1;
+    grid-row: 2;
 }
 
 .ImagenCarrito {
