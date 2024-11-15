@@ -56,7 +56,6 @@ const Checkout = () => {
                 <input type="email" placeholder="gustabo@gmail.com" name="email" onChange={capturarInfo} />
                 <input type="tel" placeholder="1144777888" name="telefono" onChange={capturarInfo} />
                 <button type="submit">Comprar</button>
-                <button type="button">Cancelar</button>
             </form>
         </div>
     )
