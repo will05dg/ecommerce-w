@@ -1,0 +1,21 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 10px;
+    margin: 20px 5px;
+    border-radius: 12px;
+}
+
+.tiket {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20pt;
+}

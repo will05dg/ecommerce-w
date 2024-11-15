@@ -29,8 +29,6 @@ export const ItemListContainer = () => {
         })
     }, [categoria]);
 
-    //const funcionAgregar = () => {const productsColection = collection(db, "productosArte"); productosArte.forEach((productosArte) => { addDoc(productsColection, productosArte) })}
-
     return (
         <div className="grilla">
             <ItemList myProductosArte={myProductosArte} />
