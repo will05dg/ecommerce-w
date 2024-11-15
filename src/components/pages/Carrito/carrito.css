@@ -26,16 +26,16 @@
 }
 
 .textoCarrito {
-    margin: 3% 3%;
+    width: 80%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
 .textoCarrito1 {
-    margin: 0% 20%;
+    margin: 1%;
     display: flex;
-    flex-direction: column-reverse;
     align-items: flex-end;
 }
 

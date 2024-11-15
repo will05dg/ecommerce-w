@@ -15,12 +15,14 @@ export const Carrito = () => {
                     <img src={product.imagenSrc} alt="" className="ImagenCarrito" />
                     <div className="textoCarrito">
                         <h2>{product.titulo}</h2>
-                        <h3>precio por unidad US ${product.precio}</h3>
-                        <h3>cantidad: {product.quantity}</h3 >
-                        <h3>total: US ${product.quantity * product.precio}</h3>
+                        <h2>total: US ${product.quantity * product.precio}</h2>
+                        <div>
+                            <h3>cantidad: {product.quantity}</h3 >
+                            <h4>precio por unidad US ${product.precio}</h4>
+                        </div>
                     </div>
                     <div className="textoCarrito1">
-                        <button onClick={() => removeById(product.id)}>eliminar</button>
+                        <button className="buttonMenor" onClick={() => removeById(product.id)}>eliminar</button>
                     </div>
                 </div>;
             })}
@@ -29,11 +31,11 @@ export const Carrito = () => {
 
             {cart.length > 0 ? (
                 <div className="botonCarrito">
-                    <button onClick={resetCart}>limpiar</button>
-                    <h2>El total a pager es US ${total}</h2>
+                    <h2 className="espacioTipografia">El total a pager es US ${total}</h2>
                     <Link to={"/checkout"}>
                         <button>Comprar</button>
                     </Link>
+                    <button className="buttonMenor" onClick={resetCart}>limpiar</button>
                 </div>) :
                 (
                     <div className="centro">
