@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import "./carrito.css"
 import { useContext } from "react"
 import { CartContext } from "../../../context/CartContext"
+import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 
 export const Carrito = () => {
     const { cart, resetCart, removeById, getTotalAmount } = useContext(CartContext)
@@ -22,7 +23,7 @@ export const Carrito = () => {
                         </div>
                     </div>
                     <div className="textoCarrito1">
-                        <button className="buttonMenor" onClick={() => removeById(product.id)}>eliminar</button>
+                        <button className="buttonMenor" onClick={() => removeById(product.id)}> <DeleteForeverOutlinedIcon /> </button>
                     </div>
                 </div>;
             })}
@@ -35,7 +36,7 @@ export const Carrito = () => {
                     <Link to={"/checkout"}>
                         <button>Comprar</button>
                     </Link>
-                    <button className="buttonMenor" onClick={resetCart}>limpiar</button>
+                    <button className="buttonMenor" onClick={resetCart}>limpiar </button>
                 </div>) :
                 (
                     <div className="centro">
