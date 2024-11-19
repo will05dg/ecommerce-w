@@ -36,7 +36,7 @@ export const Carrito = () => {
                     <Link to={"/checkout"}>
                         <button>Comprar</button>
                     </Link>
-                    <button className="buttonMenor" onClick={resetCart}>limpiar </button>
+                    <button className="buttonMenor" onClick={resetCart}>limpiar</button>
                 </div>) :
                 (
                     <div className="centro">
